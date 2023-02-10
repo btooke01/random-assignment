@@ -1068,49 +1068,77 @@ let card_1 = 0
 let card_3 = 0
 let card_2 = 0
 let card_5 = 0
+let player_score = 0
+let kard_6_v = 0
 let kard_5_v = 0
+let kard_4_v = 0
+let kard_3_v = 0
 let kard_2_v = 0
 let kard_1_v = 0
+let pile_of_kard: Sprite = null
 let Card_6: Sprite = null
 let Card_5: Sprite = null
 let Card_4: Sprite = null
 let Card_3: Sprite = null
 let Card_2: Sprite = null
 let Card_1: Sprite = null
-Card_1 = sprites.create(assets.image`myImage6`, SpriteKind.Player)
-Card_2 = sprites.create(assets.image`myImage59`, SpriteKind.Player)
-Card_3 = sprites.create(assets.image`myImage61`, SpriteKind.Player)
-Card_4 = sprites.create(assets.image`myImage59`, SpriteKind.Player)
-Card_5 = sprites.create(assets.image`myImage61`, SpriteKind.Player)
-Card_6 = sprites.create(assets.image`myImage61`, SpriteKind.Player)
-let pile_of_kard = sprites.create(assets.image`myImage61`, SpriteKind.Player)
-kard_1_v = 0
-kard_2_v = 0
-let kard_3_v = 0
-let kard_4_v = 0
-kard_5_v = 0
-let kard_6_v = 0
-scene.setBackgroundImage(assets.image`Russia`)
-карточная1()
-карточная2()
-Card_1.setPosition(87, 98)
-Card_2.setPosition(64, 98)
-Card_3.setPosition(64, 31)
-Card_4.setPosition(87, 31)
-Card_5.setPosition(75, 60)
-Card_6.setPosition(75, 60)
-pile_of_kard.setPosition(75, 60)
-game.splash("press a, b, up, down, and right to draw 5 cards")
-let player_score = kard_1_v + kard_2_v
-game.splash("you have " + player_score + "!")
-if (game.ask("do you want to hit ?")) {
-    карточная5()
-    Card_5.setPosition(99, 98)
-    Card_1.setPosition(82, 98)
-    player_score = player_score + kard_5_v
+info.player2.setScore(0)
+info.player1.setScore(0)
+let rounds = game.askForNumber("How many rounds ?", 1)
+for (let index = 0; index < rounds; index++) {
+    pause(100)
+    Card_1 = sprites.create(assets.image`myImage6`, SpriteKind.Player)
+    Card_2 = sprites.create(assets.image`myImage59`, SpriteKind.Player)
+    Card_3 = sprites.create(assets.image`myImage61`, SpriteKind.Player)
+    Card_4 = sprites.create(assets.image`myImage59`, SpriteKind.Player)
+    Card_5 = sprites.create(assets.image`myImage61`, SpriteKind.Player)
+    Card_6 = sprites.create(assets.image`myImage61`, SpriteKind.Player)
+    pile_of_kard = sprites.create(assets.image`myImage61`, SpriteKind.Player)
+    kard_1_v = 0
+    kard_2_v = 0
+    kard_3_v = 0
+    kard_4_v = 0
+    kard_5_v = 0
+    kard_6_v = 0
+    scene.setBackgroundImage(assets.image`Russia`)
+    карточная1()
+    карточная2()
+    Card_1.setPosition(87, 98)
+    Card_2.setPosition(64, 98)
+    Card_3.setPosition(64, 31)
+    Card_4.setPosition(87, 31)
+    Card_5.setPosition(75, 60)
+    Card_6.setPosition(75, 60)
+    pile_of_kard.setPosition(75, 60)
+    player_score = kard_1_v + kard_2_v
     game.splash("you have " + player_score + "!")
-    if (player_score > 21) {
-        game.splash("you busted")
-        game.gameOver(false)
+    while (game.ask("do you want to hit ?")) {
+        карточная5()
+        Card_5.setPosition(99, 98)
+        Card_1.setPosition(82, 98)
+        player_score = player_score + kard_5_v
+        game.splash("you have " + player_score + "!")
+        if (player_score > 21) {
+            game.splash("you busted")
+            info.player2.changeScoreBy(1)
+        }
     }
+    sprites.destroy(Card_1)
+    sprites.destroy(Card_2)
+    sprites.destroy(Card_3)
+    sprites.destroy(Card_4)
+    sprites.destroy(Card_5)
+    sprites.destroy(Card_6)
+    game.splash("the score is " + info.player1.score() + " (you) to " + info.player2.score())
+}
+game.splash("winner after " + rounds + " rounds is..")
+if (info.player2.score() < info.player1.score()) {
+    game.splash("YOU!! ")
+    game.gameOver(true)
+} else if (info.player2.score() > info.player1.score()) {
+    game.splash(" the bot! ")
+    game.gameOver(false)
+} else {
+    game.splash("a tie")
+    game.gameOver(true)
 }
