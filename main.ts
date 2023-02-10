@@ -1,12 +1,3 @@
-controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
-	
-})
-controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-	
-})
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-	
-})
 function карточная5 () {
     card_5 = randint(1, 52)
     if (card_5 == 1) {
@@ -491,107 +482,159 @@ function карточная1 () {
     card_1 = randint(1, 52)
     if (card_1 == 1) {
         Card_1 = sprites.create(assets.image`myImage7`, SpriteKind.Player)
+        kard_1_v = 1
     } else if (card_1 == 2) {
         Card_1 = sprites.create(assets.image`myImage26`, SpriteKind.Player)
+        kard_1_v = 2
     } else if (card_1 == 3) {
         Card_1 = sprites.create(assets.image`myImage27`, SpriteKind.Player)
+        kard_1_v = 3
     } else if (card_1 == 4) {
         Card_1 = sprites.create(assets.image`myImage9`, SpriteKind.Player)
+        kard_1_v = 4
     } else if (card_1 == 5) {
         Card_1 = sprites.create(assets.image`myImage10`, SpriteKind.Player)
+        kard_1_v = 5
     } else if (card_1 == 6) {
         Card_1 = sprites.create(assets.image`myImage8`, SpriteKind.Player)
+        kard_1_v = 6
     } else if (card_1 == 7) {
         Card_1 = sprites.create(assets.image`myImage11`, SpriteKind.Player)
+        kard_1_v = 7
     } else if (card_1 == 8) {
         Card_1 = sprites.create(assets.image`myImage12`, SpriteKind.Player)
+        kard_1_v = 8
     } else if (card_1 == 9) {
         Card_1 = sprites.create(assets.image`myImage14`, SpriteKind.Player)
+        kard_1_v = 9
     } else if (card_1 == 10) {
         Card_1 = sprites.create(assets.image`myImage13`, SpriteKind.Player)
+        kard_1_v = 10
     } else if (card_1 == 11) {
         Card_1 = sprites.create(assets.image`myImage43`, SpriteKind.Player)
+        kard_1_v = 10
     } else if (card_1 == 12) {
         Card_1 = sprites.create(assets.image`myImage45`, SpriteKind.Player)
+        kard_1_v = 10
     } else if (card_1 == 13) {
+        kard_1_v = 10
         Card_1 = sprites.create(assets.image`myImage44`, SpriteKind.Player)
     } else if (card_1 == 14) {
         Card_1 = sprites.create(assets.image`myImage25`, SpriteKind.Player)
+        kard_1_v = 1
     } else if (card_1 == 15) {
         Card_1 = sprites.create(assets.image`myImage28`, SpriteKind.Player)
+        kard_1_v = 2
     } else if (card_1 == 16) {
+        kard_1_v = 3
         Card_1 = sprites.create(assets.image`myImage29`, SpriteKind.Player)
     } else if (card_1 == 17) {
+        kard_1_v = 4
         Card_1 = sprites.create(assets.image`myImage30`, SpriteKind.Player)
     } else if (card_1 == 18) {
+        kard_1_v = 5
         Card_1 = sprites.create(assets.image`myImage31`, SpriteKind.Player)
     } else if (card_1 == 19) {
+        kard_1_v = 6
         Card_1 = sprites.create(assets.image`myImage32`, SpriteKind.Player)
     } else if (card_1 == 20) {
+        kard_1_v = 7
         Card_1 = sprites.create(assets.image`myImage33`, SpriteKind.Player)
     } else if (card_1 == 21) {
+        kard_1_v = 8
         Card_1 = sprites.create(assets.image`myImage34`, SpriteKind.Player)
     } else if (card_1 == 22) {
+        kard_1_v = 9
         Card_1 = sprites.create(assets.image`myImage35`, SpriteKind.Player)
     } else if (card_1 == 23) {
+        kard_1_v = 10
         Card_1 = sprites.create(assets.image`myImage36`, SpriteKind.Player)
     } else if (card_1 == 24) {
+        kard_1_v = 10
         Card_1 = sprites.create(assets.image`myImage39`, SpriteKind.Player)
     } else if (card_1 == 25) {
+        kard_1_v = 10
         Card_1 = sprites.create(assets.image`myImage38`, SpriteKind.Player)
     } else if (card_1 == 26) {
+        kard_1_v = 10
         Card_1 = sprites.create(assets.image`myImage37`, SpriteKind.Player)
     } else if (card_1 == 27) {
+        kard_1_v = 1
         Card_1 = sprites.create(assets.image`myImage15`, SpriteKind.Player)
     } else if (card_1 == 28) {
+        kard_1_v = 2
         Card_1 = sprites.create(assets.image`myImage16`, SpriteKind.Player)
     } else if (card_1 == 29) {
+        kard_1_v = 3
         Card_1 = sprites.create(assets.image`myImage17`, SpriteKind.Player)
     } else if (card_1 == 30) {
+        kard_1_v = 4
         Card_1 = sprites.create(assets.image`myImage18`, SpriteKind.Player)
     } else if (card_1 == 31) {
+        kard_1_v = 5
         Card_1 = sprites.create(assets.image`myImage19`, SpriteKind.Player)
     } else if (card_1 == 32) {
+        kard_1_v = 6
         Card_1 = sprites.create(assets.image`myImage22`, SpriteKind.Player)
     } else if (card_1 == 33) {
+        kard_1_v = 7
         Card_1 = sprites.create(assets.image`myImage20`, SpriteKind.Player)
     } else if (card_1 == 34) {
+        kard_1_v = 8
         Card_1 = sprites.create(assets.image`myImage24`, SpriteKind.Player)
     } else if (card_1 == 35) {
+        kard_1_v = 9
         Card_1 = sprites.create(assets.image`myImage21`, SpriteKind.Player)
     } else if (card_1 == 36) {
+        kard_1_v = 10
         Card_1 = sprites.create(assets.image`myImage23`, SpriteKind.Player)
     } else if (card_1 == 37) {
+        kard_1_v = 10
         Card_1 = sprites.create(assets.image`myImage43`, SpriteKind.Player)
     } else if (card_1 == 38) {
+        kard_1_v = 10
         Card_1 = sprites.create(assets.image`myImage42`, SpriteKind.Player)
     } else if (card_1 == 39) {
+        kard_1_v = 10
         Card_1 = sprites.create(assets.image`myImage41`, SpriteKind.Player)
     } else if (card_1 == 40) {
+        kard_1_v = 1
         Card_1 = sprites.create(assets.image`myImage40`, SpriteKind.Player)
     } else if (card_1 == 41) {
+        kard_1_v = 2
         Card_1 = sprites.create(assets.image`myImage47`, SpriteKind.Player)
     } else if (card_1 == 42) {
+        kard_1_v = 3
         Card_1 = sprites.create(assets.image`myImage48`, SpriteKind.Player)
     } else if (card_1 == 43) {
+        kard_1_v = 4
         Card_1 = sprites.create(assets.image`myImage49`, SpriteKind.Player)
     } else if (card_1 == 44) {
+        kard_1_v = 5
         Card_1 = sprites.create(assets.image`myImage50`, SpriteKind.Player)
     } else if (card_1 == 45) {
+        kard_1_v = 6
         Card_1 = sprites.create(assets.image`myImage32`, SpriteKind.Player)
     } else if (card_1 == 46) {
+        kard_1_v = 7
         Card_1 = sprites.create(assets.image`myImage52`, SpriteKind.Player)
     } else if (card_1 == 47) {
+        kard_1_v = 8
         Card_1 = sprites.create(assets.image`myImage53`, SpriteKind.Player)
     } else if (card_1 == 48) {
+        kard_1_v = 9
         Card_1 = sprites.create(assets.image`myImage54`, SpriteKind.Player)
     } else if (card_1 == 49) {
+        kard_1_v = 10
         Card_1 = sprites.create(assets.image`myImage55`, SpriteKind.Player)
     } else if (card_1 == 50) {
+        kard_1_v = 10
         Card_1 = sprites.create(assets.image`myImage56`, SpriteKind.Player)
     } else if (card_1 == 51) {
+        kard_1_v = 10
         Card_1 = sprites.create(assets.image`myImage57`, SpriteKind.Player)
     } else if (card_1 == 52) {
+        kard_1_v = 10
         Card_1 = sprites.create(assets.image`myImage58`, SpriteKind.Player)
     }
 }
@@ -915,18 +958,13 @@ function карточная6 () {
         Card_5.setPosition(44, 60)
     }
 }
-controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
-	
-})
-controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
-	
-})
 let card_6 = 0
 let card_4 = 0
 let card_1 = 0
 let card_3 = 0
 let card_2 = 0
 let card_5 = 0
+let kard_1_v = 0
 let Card_6: Sprite = null
 let Card_5: Sprite = null
 let Card_4: Sprite = null
@@ -940,7 +978,7 @@ Card_4 = sprites.create(assets.image`myImage59`, SpriteKind.Player)
 Card_5 = sprites.create(assets.image`myImage61`, SpriteKind.Player)
 Card_6 = sprites.create(assets.image`myImage61`, SpriteKind.Player)
 let pile_of_kard = sprites.create(assets.image`myImage61`, SpriteKind.Player)
-let kard_1_v = 0
+kard_1_v = 0
 let kard_2_v = 0
 let kard_3_v = 0
 let kard_4_v = 0
