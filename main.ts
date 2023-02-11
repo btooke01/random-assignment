@@ -1068,8 +1068,8 @@ let card_1 = 0
 let card_3 = 0
 let card_2 = 0
 let card_5 = 0
-let player_score = 0
 let hit_or_not = false
+let player_score = 0
 let kard_6_v = 0
 let kard_5_v = 0
 let kard_4_v = 0
@@ -1085,6 +1085,7 @@ let Card_2: Sprite = null
 let Card_1: Sprite = null
 info.player2.setScore(0)
 info.player1.setScore(0)
+game.splash("BlackJack")
 let rounds = game.askForNumber("How many rounds ?", 1)
 for (let index = 0; index < rounds; index++) {
     pause(100)
@@ -1104,7 +1105,6 @@ for (let index = 0; index < rounds; index++) {
     scene.setBackgroundImage(assets.image`Russia`)
     карточная1()
     карточная2()
-    hit_or_not = true
     Card_1.setPosition(87, 98)
     Card_2.setPosition(64, 98)
     Card_3.setPosition(64, 31)
@@ -1114,15 +1114,18 @@ for (let index = 0; index < rounds; index++) {
     pile_of_kard.setPosition(75, 60)
     player_score = kard_1_v + kard_2_v
     game.splash("you have " + player_score + "!")
+    hit_or_not = game.ask("do you want to hit")
     while (hit_or_not) {
         карточная5()
         Card_5.setPosition(99, 98)
         Card_1.setPosition(82, 98)
         player_score = player_score + kard_5_v
         game.splash("you have " + player_score + "!")
+        hit_or_not = game.ask("do you want to hit")
         if (player_score > 21) {
             game.splash("you busted")
             info.player2.changeScoreBy(1)
+            hit_or_not = false
         }
     }
     sprites.destroy(Card_1)
